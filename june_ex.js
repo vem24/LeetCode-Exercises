@@ -65,9 +65,22 @@ var createCounter = function(init) {
 /**********************************/
 /** Element Transformed **/
 const map = (arr, fn) => {
-    
+
     for (let x = 0; x > arr.length; x++) {
         arr[x] = fn(arr[x], x);
     }
     return arr;
 }
+
+/**********************************/
+/** Filter Elements **/
+
+var filter = function(arr, fn) {
+    let arr2 = [];
+    for (let x = 0; x < arr.length; x++) {
+        if (fn(arr[x], x)) {
+            arr2.push(arr[x]);
+        }
+    }
+    return arr2;
+};
