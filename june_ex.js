@@ -84,3 +84,13 @@ var filter = function(arr, fn) {
     }
     return arr2;
 };
+
+/** Reduce **/
+
+var reduce = function(nums, fn, init) {
+    let val = init;
+    for (let x = 0; x < nums.length; x++) {
+        val = fn(val, nums[x]);
+    }
+    return val;
+};
